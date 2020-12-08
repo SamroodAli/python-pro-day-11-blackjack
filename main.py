@@ -19,7 +19,7 @@ cards = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K']
 def deal_new_card(list,is_player=False):
     card = random.choice(cards)
     if is_player:
-        print(f"You drew {card}")
+        print(f"Drew {card}")
     if card == 'A':
         sum_list = sum(list)
         if (sum_list+11) > 21:
@@ -44,6 +44,8 @@ def blackjack():
             print("Dealer bust, you win")
         elif sum_player > sum_pc:
             print("You win")
+        elif sum_player == sum_pc:
+            print("IT is a draw")
         else:
             print("You lose")
 
