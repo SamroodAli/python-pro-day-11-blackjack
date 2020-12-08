@@ -13,7 +13,7 @@ import random
 ## The cards in the list have equal probability of being drawn.
 ## Cards are not removed from the deck as they are drawn.
 ## The computer is the dealer.
-print(logo)
+
 cards = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K']
 
 def deal_new_card(list,is_player=False):
@@ -42,6 +42,7 @@ def deal_new_card(list,is_player=False):
 
 
 def blackjack():
+    print(logo)
     clear()
     def check_winner():
         sum_pc = sum(pc_hand)
