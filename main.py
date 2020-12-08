@@ -21,11 +21,20 @@ def deal_new_card(list,is_player=False):
     if is_player:
         print(f"Drew {card}")
     if card == 'A':
-        sum_list = sum(list)
-        if (sum_list+11) > 21:
+        if 11 in list:
             list.append(1)
+            sum_list = sum(list)
+            if sum_list > 21:
+                print("You drew ace again, and got over 21, so your previous ace has also been converted to 1")
+                list.remove(11)
+                list.append(1)
         else:
-            list.append(11)
+            sum_list = sum(list)
+            if (sum_list+11)>21:
+                print("You drew an ace but converted to 1")
+                list.append(1)
+            else:
+                list.append(11)
     elif card =='J' or card=='Q' or card =='K':
         list.append(10)
     else:
