@@ -42,8 +42,9 @@ def deal_new_card(list,is_player=False):
 
 
 def blackjack():
-    print(logo)
     clear()
+    print(logo)
+
     def check_winner():
         sum_pc = sum(pc_hand)
         sum_player=sum(player_hand)
