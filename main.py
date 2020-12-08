@@ -86,7 +86,7 @@ def blackjack():
             deal_new_card(player_hand,True)
             sum_player=sum(player_hand)
             check_winner()
-            game_over=True
+
         else:
             check_winner()
             game_over=True
