@@ -1,6 +1,7 @@
 from replit import clear
 from art import logo
-
+from replit import clear
+import random
 
 ############### Blackjack Project #####################
 
@@ -15,3 +16,4 @@ from art import logo
 ## The computer is the dealer.
 print(logo)
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+
