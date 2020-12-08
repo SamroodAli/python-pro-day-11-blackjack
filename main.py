@@ -53,8 +53,6 @@ def blackjack():
     print(logo)
 
     def check_winner():
-        sum_pc = sum(pc_hand)
-        sum_player=sum(player_hand)
         print(f"your hand = {player_hand} and total = {sum_player}\npc hand = {pc_hand} and total = {sum_pc}\n")
 
         if sum_player >21:
@@ -77,17 +75,21 @@ def blackjack():
         sum_player=sum(player_hand)
     print(f"Your hand : {player_hand} and total = {sum_player}\nPc hand : {pc_hand[0]}")
     game_over = False
+
     while sum_player < 22 and not game_over:
         while sum_pc < 17:
             deal_new_card(pc_hand)
             sum_pc=sum(pc_hand)
+
         hit = input("Do you want to hit or stand\nh = hit\ns = stand\n")
+        
         if hit == "h":
             deal_new_card(player_hand,True)
             sum_player=sum(player_hand)
-            check_winner()
-
+            print(f"your hand = {player_hand} and total = {sum_player}\n")
         else:
+            sum_pc = sum(pc_hand)
+            sum_player=sum(player_hand)
             check_winner()
             game_over=True
             break
