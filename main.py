@@ -87,6 +87,8 @@ def blackjack():
             deal_new_card(player_hand,True)
             sum_player=sum(player_hand)
             print(f"your hand = {player_hand} and total = {sum_player}\n")
+            if sum_player>21:
+                print("You busted")
         else:
             sum_pc = sum(pc_hand)
             sum_player=sum(player_hand)
